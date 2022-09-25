@@ -3,12 +3,18 @@
     <div class="col-lg-4">
       <ProductListing />
     </div>
-    <!-- <div class="col-lg-4">
+    <div class="col-lg-4">
       <ProductListing />
     </div>
     <div class="col-lg-4">
       <ProductListing />
-    </div> -->
+    </div>
+    <div class="col-lg-4">
+      <ProductListing />
+    </div>
+    <div class="col-lg-4">
+      <ProductListing />
+    </div>
   </div>
 </template>
 
