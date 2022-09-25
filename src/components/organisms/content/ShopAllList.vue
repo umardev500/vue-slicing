@@ -9,8 +9,13 @@
       </div>
     </div>
 
-    <!-- Sort list -->
-    <SortList />
+    <div class="d-flex justify-content-between">
+      <!-- Sort list -->
+      <SortList />
+
+      <!-- View type -->
+      <ViewType />
+    </div>
   </div>
 </template>
 
@@ -18,9 +23,10 @@
 import { Options, Vue } from "vue-class-component";
 import ContentLabel from "@/components/atoms/label/ContentLabel.vue";
 import SortList from "./SortList.vue";
+import ViewType from "@/components/molecules/viewType/ViewType.vue";
 
 @Options({
-  components: { ContentLabel, SortList },
+  components: { ContentLabel, SortList, ViewType },
 })
 export default class ShopAllList extends Vue {}
 </script>
