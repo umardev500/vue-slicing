@@ -10,6 +10,11 @@
 * {
   font-family: "Roboto";
 }
+
+body {
+  background-color: #f6f6f6 !important;
+}
+
 .text-color-primary {
   color: #05c4c4;
   opacity: 0.5;
