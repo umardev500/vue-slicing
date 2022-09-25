@@ -2,7 +2,7 @@
   <HashtagListing
     role="button"
     :value="value"
-    :class="['px-3 hashtag-active sort-item', status && 'active']"
+    :class="['px-3 hashtag-active sort-item mb-0', status && 'active']"
   />
 </template>
 
