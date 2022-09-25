@@ -2,8 +2,12 @@
   <div class="mt-4">
     <Label class="fw-bold d-inline-flex mb-3" value="Price range" />
     <div class="range-container d-flex flex-column position-relative mt-3">
-      <input type="range" class="range form-range w-100" />
-      <input type="range" class="range range-max form-range w-100" />
+      <input type="range" class="range form-range w-100" value="30" />
+      <input
+        type="range"
+        class="range range-max form-range w-100"
+        value="100"
+      />
     </div>
   </div>
 </template>

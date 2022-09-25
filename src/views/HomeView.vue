@@ -1,12 +1,14 @@
 <template>
   <Header />
-  <div class="app-container">
+  <div class="app-container pt-lg-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
           <Sidebar />
         </div>
-        <div class="col-lg-8">hallo</div>
+        <div class="col-lg-8">
+          <Content />
+        </div>
       </div>
     </div>
   </div>
@@ -17,12 +19,14 @@ import { Options, Vue } from "vue-class-component";
 import { Header } from "@/components/organisms/header";
 import Banner from "@/components/organisms/banner/Banner.vue";
 import { Sidebar } from "@/components/organisms/sidebar";
+import Content from "@/components/organisms/content/Content.vue";
 
 @Options({
   components: {
     Header,
     Banner,
     Sidebar,
+    Content,
   },
 })
 export default class HomeView extends Vue {}
@@ -30,7 +34,6 @@ export default class HomeView extends Vue {}
 
 <style>
 .app-container {
-  padding-top: 50px;
   padding-bottom: 50px;
   min-height: 100vh;
 }
