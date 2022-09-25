@@ -2,6 +2,7 @@
   <div>
     <div class="sidebar-inner rounded">
       <CategoryList />
+      <HashtagList />
     </div>
   </div>
 </template>
@@ -10,9 +11,10 @@
 import { Options, Vue } from "vue-class-component";
 import Label from "@/components/atoms/label/Label.vue";
 import CategoryList from "./CategoryList.vue";
+import HashtagList from "./HashtagList.vue";
 
 @Options({
-  components: { Label, CategoryList },
+  components: { Label, CategoryList, HashtagList },
 })
 export default class Sidebar extends Vue {}
 </script>

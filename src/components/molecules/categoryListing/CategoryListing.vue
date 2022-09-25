@@ -29,5 +29,6 @@ export default defineComponent({
 .category-text {
   color: #707070;
   opacity: 0.8;
+  font-size: 15px;
 }
 </style>
