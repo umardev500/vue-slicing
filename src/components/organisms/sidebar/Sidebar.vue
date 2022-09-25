@@ -3,6 +3,7 @@
     <div class="sidebar-inner rounded">
       <CategoryList />
       <HashtagList />
+      <PriceRange />
     </div>
   </div>
 </template>
@@ -12,9 +13,10 @@ import { Options, Vue } from "vue-class-component";
 import Label from "@/components/atoms/label/Label.vue";
 import CategoryList from "./CategoryList.vue";
 import HashtagList from "./HashtagList.vue";
+import PriceRange from "./PriceRange.vue";
 
 @Options({
-  components: { Label, CategoryList, HashtagList },
+  components: { Label, CategoryList, HashtagList, PriceRange },
 })
 export default class Sidebar extends Vue {}
 </script>
@@ -25,6 +27,6 @@ export default class Sidebar extends Vue {}
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 120px;
 }
 </style>
