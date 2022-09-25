@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="d-flex">
-      <span class="text-nowrap sort-text me-3">Sort by : </span>
+      <div class="d-flex align-items-center">
+        <i class="fa-solid fa-filter me-2 sort-icon"></i>
+        <span class="text-nowrap sort-text me-3">Sort by : </span>
+      </div>
       <div class="sort-listing position-relative">
         <SortListing value="Default" :status="true" />
         <SortListing value="Popularity" />
@@ -26,6 +29,11 @@ export default class SortList extends Vue {}
 .sort-text {
   font-size: 20px;
   color: #707070;
+}
+
+.sort-icon {
+  color: #707070;
+  opacity: 0.8;
 }
 
 .sort-listing::after {
