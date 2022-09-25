@@ -23,7 +23,7 @@ export default defineComponent({
   border-color: $borderColor !important;
   border-width: 2px !important;
   margin-top: 0 !important;
-  margin-right: 8px !important;
+  margin-right: 12px !important;
 }
 
 .category-text {
