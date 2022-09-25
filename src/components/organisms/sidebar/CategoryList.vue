@@ -1,9 +1,12 @@
 <template>
   <div>
     <Label class="fw-bold d-inline-flex mb-3" value="Categories" />
+    <!-- loop here -->
     <CategoryListing value="All (1080)" />
     <CategoryListing value="Arts & Crafts (38)" />
     <CategoryListing value="Fitness & Sports (469)" />
+    <!-- end -->
+
     <div class="ms-3" role="button">
       <span class="show-all-text fw-bold">Show all</span>
       <i class="fa-solid fa-angle-down ms-2 show-all-caret"></i>
