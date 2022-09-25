@@ -12,6 +12,8 @@
       </div>
     </div>
   </div>
+  <!-- Footer -->
+  <Footer />
 </template>
 
 <script lang="ts">
@@ -20,6 +22,7 @@ import { Header } from "@/components/organisms/header";
 import Banner from "@/components/organisms/banner/Banner.vue";
 import { Sidebar } from "@/components/organisms/sidebar";
 import Content from "@/components/organisms/content/Content.vue";
+import Footer from "@/components/organisms/footer/Footer.vue";
 
 @Options({
   components: {
@@ -27,6 +30,7 @@ import Content from "@/components/organisms/content/Content.vue";
     Banner,
     Sidebar,
     Content,
+    Footer,
   },
 })
 export default class HomeView extends Vue {}
