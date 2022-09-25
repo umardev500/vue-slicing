@@ -1,6 +1,10 @@
 <template>
   <div
-    class="pagination-item d-inline-flex fw-bold rounded-pill align-items-center justify-content-center"
+    role="button"
+    :class="[
+      'pagination-item d-inline-flex fw-bold rounded-pill align-items-center justify-content-center',
+      more && 'more-item',
+    ]"
   >
     {{ value }}
   </div>
@@ -14,6 +18,7 @@ export default defineComponent({
   components: {},
   props: {
     value: { type: String },
+    more: { type: Boolean },
   },
 });
 </script>
@@ -24,7 +29,12 @@ export default defineComponent({
   width: 50px;
   height: 50px;
   color: $appColorPrimary;
+  opacity: 0.5;
   font-size: 18px;
   margin-right: 40px;
+}
+
+.more-item {
+  border-color: transparent !important;
 }
 </style>

@@ -6,8 +6,8 @@
     <PaginationListing value="1" />
     <PaginationListing value="2" />
     <PaginationListing value="3" />
-    <PaginationListing value="..." />
-    <PaginationListing value="20" />
+    <PaginationListing :more="true" value="..." />
+    <PaginationListing value="30" />
     <div>
       <i class="fa-solid fa-caret-right prev-next font-size"></i>
     </div>
@@ -28,6 +28,7 @@ export default defineComponent({
 .prev-next {
   font-size: 30px;
   color: $appColorPrimary;
+  opacity: 0.5;
 }
 
 .prev {
