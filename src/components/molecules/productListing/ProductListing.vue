@@ -8,13 +8,17 @@
         <span class="d-flex p-0 lh-1 product-category">Skincare</span>
         <span class="d-flex p-0 product-name fw-bold">Product Name</span>
       </div>
-      <div class="mt-2">
+      <div class="mt-2 d-flex">
         <span class="product-price-cut">798 HKD</span>
         <span class="product-price-cut-percentage">50% off</span>
       </div>
-      <div>
-        <span class="product-price fw-bold">399</span>
-        <span class="product-price-currency lh-1">HKD</span>
+      <div class="d-flex align-items-end">
+        <span class="product-price fw-bold lh-1">399</span>
+        <span class="product-price-currency">HKD</span>
+      </div>
+      <div class="d-flex flex-fill flex-wrap mt-3">
+        <span class="badge text-white product-badge">Discount</span>
+        <span class="badge text-white product-badge">Free Shipping</span>
       </div>
     </div>
   </div>
@@ -64,5 +68,11 @@
   color: $blackColor;
   font-size: 15px;
   font-weight: 500;
+}
+
+.product-badge {
+  background-color: $pinkColor;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 </style>
