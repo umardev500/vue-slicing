@@ -4,6 +4,7 @@
     <ShopAllList />
     <Search />
     <ProductList />
+    <Pagination />
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import CollectionList from "./CollectionList.vue";
 import ShopAllList from "./ShopAllList.vue";
 import Search from "./Search.vue";
 import ProductList from "../productList/ProductList.vue";
+import Pagination from "../pagination/Pagination.vue";
 
 @Options({
   components: {
@@ -20,6 +22,7 @@ import ProductList from "../productList/ProductList.vue";
     ShopAllList,
     Search,
     ProductList,
+    Pagination,
   },
 })
 export default class Content extends Vue {}

@@ -15,6 +15,9 @@
     <div class="col-lg-4">
       <ProductListing />
     </div>
+    <div class="col-lg-4">
+      <ProductListing />
+    </div>
   </div>
 </template>
 
