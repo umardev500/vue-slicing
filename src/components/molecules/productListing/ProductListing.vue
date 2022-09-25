@@ -1,7 +1,17 @@
 <template>
   <div class="bg-white rounded mb-4 overflow-hidden" role="button">
-    <div class="thumb-wrapper position-relative">
+    <div class="thumb-wrapper position-relative bg-success">
       <img class="w-100" src="../../../../assets/thumbs/1.png" alt="thumb" />
+      <div class="card-button-overlay d-flex flex-column">
+        <i
+          role="button"
+          class="fa-solid fa-cart-arrow-down card-button-overlay-item text-white ms-2"
+        ></i>
+        <i
+          role="button"
+          class="fa-solid mt-3 fa-share card-button-overlay-item text-white ms-2"
+        ></i>
+      </div>
     </div>
     <div class="px-3 py-3">
       <div>
@@ -25,6 +35,17 @@
 </template>
 
 <style lang="scss">
+.card-button-overlay {
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
+.card-button-overlay-item:hover {
+  color: #f2c94c !important;
+}
+
 .thumb-wrapper::after {
   content: "";
   position: absolute;
