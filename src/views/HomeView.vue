@@ -1,11 +1,13 @@
 <template>
   <Header />
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <Sidebar />
+  <div class="app-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <Sidebar />
+        </div>
+        <div class="col-lg-8">hallo</div>
       </div>
-      <div class="col-lg-8">hallo</div>
     </div>
   </div>
 </template>
@@ -28,9 +30,15 @@ export default class HomeView extends Vue {}
 
 <style>
 .app-container {
-  background-color: #f6f6f6;
   padding-top: 50px;
   padding-bottom: 50px;
   min-height: 100vh;
+}
+
+@media (min-width: 992px) {
+  .app-container {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
 }
 </style>

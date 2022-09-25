@@ -1,9 +1,7 @@
 <template>
   <div>
     <div class="sidebar-inner rounded">
-      <div>
-        <Label class="fw-bold" value="Categories" />
-      </div>
+      <CategoryList />
     </div>
   </div>
 </template>
@@ -11,9 +9,10 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import Label from "@/components/atoms/label/Label.vue";
+import CategoryList from "./CategoryList.vue";
 
 @Options({
-  components: { Label },
+  components: { Label, CategoryList },
 })
 export default class Sidebar extends Vue {}
 </script>
