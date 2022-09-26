@@ -1,6 +1,6 @@
 <template>
   <div class="hashtag-card rounded-pill px-2 py-1 d-inline-flex">
-    <span class="hashtag-text">{{ value }}</span>
+    <span class="hashtag-text text-nowrap">{{ value }}</span>
   </div>
 </template>
 
