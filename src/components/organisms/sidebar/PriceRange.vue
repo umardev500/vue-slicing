@@ -2,26 +2,73 @@
   <div class="mt-4">
     <Label class="fw-bold d-inline-flex mb-3" value="Price range" />
     <div class="range-container d-flex flex-column position-relative mt-3">
-      <input type="range" class="range form-range w-100" value="30" />
+      <input
+        type="range"
+        class="range form-range w-100"
+        value="30"
+        max="1000"
+        @input="slideMin($event)"
+      />
       <input
         type="range"
         class="range range-max form-range w-100"
-        value="100"
+        value="1000"
+        max="1000"
+        @input="slide($event)"
       />
+      <span
+        class="range-value range-value-max fw-bold text-nowrap"
+        :style="[{ left: 0 + '%' }]"
+        >{{ rangeValueMin }} HKD</span
+      >
+      <span
+        class="range-value range-value-min fw-bold text-nowrap"
+        :style="[{ right: 0 + '%' }]"
+        >{{ rangeValueMax }} HKD</span
+      >
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
 import Label from "@/components/atoms/label/Label.vue";
+import { defineComponent } from "vue";
 
-@Options({
-  components: {
-    Label,
+let minGap = 5;
+
+export default defineComponent({
+  components: { Label },
+  data: () => {
+    return {
+      rangeValueMin: 30,
+      rangeValueMax: 1000,
+    };
   },
-})
-export default class PriceRange extends Vue {}
+  methods: {
+    slide: function (event: any) {
+      var val = event.target.valueAsNumber;
+
+      var result = val - this.rangeValueMin;
+      if (result <= minGap) {
+        event.target.value = this.rangeValueMin + minGap;
+        this.rangeValueMax = this.rangeValueMin;
+      } else {
+        this.rangeValueMax = val;
+      }
+    },
+    slideMin: function (event: any) {
+      var val = event.target.valueAsNumber;
+
+      var result = this.rangeValueMax - val;
+      if (result <= minGap) {
+        event.target.value = this.rangeValueMax - minGap;
+        this.rangeValueMin = this.rangeValueMax;
+      } else {
+        this.rangeValueMin = val;
+      }
+    },
+  },
+});
 </script>
 
 <style>
@@ -57,5 +104,19 @@ export default class PriceRange extends Vue {}
 
 .range-max::-webkit-slider-runnable-track {
   background-color: transparent !important;
+}
+
+.range-value {
+  font-size: 20px;
+  position: absolute;
+  color: #707070;
+  opacity: 0.8;
+  top: 25px;
+}
+
+.range-value-max {
+}
+
+.range-value-min {
 }
 </style>
