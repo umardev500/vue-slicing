@@ -5,7 +5,7 @@
         <i class="fa-solid fa-filter me-2 sort-icon"></i>
         <span class="text-nowrap sort-text me-3">Sort by : </span>
       </div>
-      <div class="sort-listing position-relative">
+      <div class="sort-listing position-relative overflow-hidden d-flex">
         <SortListing value="Default" :status="true" />
         <SortListing value="Popularity" />
         <SortListing value="Price high" />
